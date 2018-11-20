@@ -6,7 +6,7 @@
 #
 Name     : knotifyconfig
 Version  : 5.52.0
-Release  : 5
+Release  : 6
 URL      : https://download.kde.org/stable/frameworks/5.52/knotifyconfig-5.52.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.52/knotifyconfig-5.52.0.tar.xz
 Source99 : https://download.kde.org/stable/frameworks/5.52/knotifyconfig-5.52.0.tar.xz.sig
@@ -18,8 +18,20 @@ Requires: knotifyconfig-license = %{version}-%{release}
 Requires: knotifyconfig-locales = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
+BuildRequires : kbookmarks-dev
+BuildRequires : kcodecs-dev
+BuildRequires : kcompletion-dev
+BuildRequires : ki18n-dev
+BuildRequires : kio-dev
+BuildRequires : kitemviews-dev
+BuildRequires : kjobwidgets-dev
+BuildRequires : knotifications-dev
+BuildRequires : kservice-dev
+BuildRequires : kwidgetsaddons-dev
+BuildRequires : kxmlgui-dev
 BuildRequires : phonon-dev
 BuildRequires : qtbase-dev mesa-dev
+BuildRequires : solid-dev
 
 %description
 # KNotifyConfig
@@ -27,14 +39,6 @@ Configuration dialog for desktop notifications
 ## Introduction
 KNotifyConfig provides a configuration dialog for desktop notifications which
 can be embedded in your application.
-
-%package abi
-Summary: abi components for the knotifyconfig package.
-Group: Default
-
-%description abi
-abi components for the knotifyconfig package.
-
 
 %package dev
 Summary: dev components for the knotifyconfig package.
@@ -79,7 +83,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541879212
+export SOURCE_DATE_EPOCH=1542743651
 mkdir -p clr-build
 pushd clr-build
 %cmake ..
@@ -87,7 +91,7 @@ make  %{?_smp_mflags} VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1541879212
+export SOURCE_DATE_EPOCH=1542743651
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifyconfig
 cp COPYING.LGPL-2 %{buildroot}/usr/share/package-licenses/knotifyconfig/COPYING.LGPL-2
@@ -99,10 +103,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files abi
-%defattr(-,root,root,-)
-/usr/share/abi/libKF5NotifyConfig.so.5.52.0.abi
 
 %files dev
 %defattr(-,root,root,-)
