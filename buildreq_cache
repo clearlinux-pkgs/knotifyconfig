@@ -1,14 +1,2 @@
-5.64.0
-kbookmarks-dev
-kcodecs-dev
-kcompletion-dev
-ki18n-dev
-kio-dev
-kitemviews-dev
-kjobwidgets-dev
-knotifications-dev
-kservice-dev
-kwidgetsaddons-dev
-kxmlgui-dev
+5.65.0
 phonon-dev
-solid-dev
