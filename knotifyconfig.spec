@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x58D0EE648A48B3BB (faure@kde.org)
 #
 Name     : knotifyconfig
-Version  : 5.70.0
-Release  : 26
-URL      : https://download.kde.org/stable/frameworks/5.70/knotifyconfig-5.70.0.tar.xz
-Source0  : https://download.kde.org/stable/frameworks/5.70/knotifyconfig-5.70.0.tar.xz
-Source1  : https://download.kde.org/stable/frameworks/5.70/knotifyconfig-5.70.0.tar.xz.sig
+Version  : 5.71.0
+Release  : 27
+URL      : https://download.kde.org/stable/frameworks/5.71/knotifyconfig-5.71.0.tar.xz
+Source0  : https://download.kde.org/stable/frameworks/5.71/knotifyconfig-5.71.0.tar.xz
+Source1  : https://download.kde.org/stable/frameworks/5.71/knotifyconfig-5.71.0.tar.xz.sig
 Summary  : Configuration system for KNotify
 Group    : Development/Tools
 License  : LGPL-2.0 LGPL-2.1
@@ -76,15 +76,15 @@ locales components for the knotifyconfig package.
 
 
 %prep
-%setup -q -n knotifyconfig-5.70.0
-cd %{_builddir}/knotifyconfig-5.70.0
+%setup -q -n knotifyconfig-5.71.0
+cd %{_builddir}/knotifyconfig-5.71.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589229179
+export SOURCE_DATE_EPOCH=1592257633
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -100,11 +100,11 @@ make  %{?_smp_mflags}  VERBOSE=1
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1589229179
+export SOURCE_DATE_EPOCH=1592257633
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifyconfig
-cp %{_builddir}/knotifyconfig-5.70.0/COPYING.LGPL-2 %{buildroot}/usr/share/package-licenses/knotifyconfig/ba8966e2473a9969bdcab3dc82274c817cfd98a1
-cp %{_builddir}/knotifyconfig-5.70.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifyconfig/9a1929f4700d2407c70b507b3b2aaf6226a9543c
+cp %{_builddir}/knotifyconfig-5.71.0/COPYING.LGPL-2 %{buildroot}/usr/share/package-licenses/knotifyconfig/ba8966e2473a9969bdcab3dc82274c817cfd98a1
+cp %{_builddir}/knotifyconfig-5.71.0/COPYING.LIB %{buildroot}/usr/share/package-licenses/knotifyconfig/9a1929f4700d2407c70b507b3b2aaf6226a9543c
 pushd clr-build
 %make_install
 popd
@@ -129,7 +129,7 @@ popd
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/libKF5NotifyConfig.so.5
-/usr/lib64/libKF5NotifyConfig.so.5.70.0
+/usr/lib64/libKF5NotifyConfig.so.5.71.0
 
 %files license
 %defattr(0644,root,root,0755)
