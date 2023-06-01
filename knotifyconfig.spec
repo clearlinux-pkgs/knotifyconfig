@@ -7,7 +7,7 @@
 #
 Name     : knotifyconfig
 Version  : 5.106.0
-Release  : 58
+Release  : 59
 URL      : https://download.kde.org/stable/frameworks/5.106/knotifyconfig-5.106.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/5.106/knotifyconfig-5.106.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/5.106/knotifyconfig-5.106.0.tar.xz.sig
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1684877223
+export SOURCE_DATE_EPOCH=1685591038
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -130,7 +130,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1684877223
+export SOURCE_DATE_EPOCH=1685591038
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/knotifyconfig
 cp %{_builddir}/knotifyconfig-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/knotifyconfig/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -153,7 +153,6 @@ popd
 
 %files dev
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5NotifyConfig.so
 /usr/include/KF5/KNotifyConfig/KNotifyConfigWidget
 /usr/include/KF5/KNotifyConfig/knotifyconfig_export.h
 /usr/include/KF5/KNotifyConfig/knotifyconfig_version.h
@@ -167,7 +166,6 @@ popd
 
 %files lib
 %defattr(-,root,root,-)
-/V3/usr/lib64/libKF5NotifyConfig.so.5
 /V3/usr/lib64/libKF5NotifyConfig.so.5.106.0
 /usr/lib64/libKF5NotifyConfig.so.5
 /usr/lib64/libKF5NotifyConfig.so.5.106.0
