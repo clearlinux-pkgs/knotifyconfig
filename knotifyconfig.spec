@@ -9,7 +9,7 @@
 #
 Name     : knotifyconfig
 Version  : 6.2.0
-Release  : 75
+Release  : 76
 URL      : https://download.kde.org/stable/frameworks/6.2/knotifyconfig-6.2.0.tar.xz
 Source0  : https://download.kde.org/stable/frameworks/6.2/knotifyconfig-6.2.0.tar.xz
 Source1  : https://download.kde.org/stable/frameworks/6.2/knotifyconfig-6.2.0.tar.xz.sig
